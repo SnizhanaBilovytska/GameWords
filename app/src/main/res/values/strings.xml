@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">DataBase</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="editingWords">Medium Text</string>
+    <string name="btDelete">New Button</string>
+    <string name="bt1">New Button</string>
+    <string name="bt2">New Button</string>
+    <string name="bt3">New Button</string>
+    <string name="bt4">New Button</string>
+    <string name="bt5">New Button</string>
+    <string name="bt6">New Button</string>
+    <string name="bt7">New Button</string>
+    <string name="bt8">New Button</string>
+    <string name="bt9">New Button</string>
+    <string name="bt10">New Button</string>
+    <string name="bt12">New Button</string>
+    <string name="bt13">New Button</string>
+    <string name="button11">New Button</string>
+    <string name="but14">New Button</string>
+    <string name="button15">New Button</string>
+    <string name="button16">New Button</string>
+    <string name="button17">New Button</string>
+    <string name="button18">New Button</string>
+    <string name="but19">New Button</string>
+    <string name="button20">New Button</string>
+    <string name="bt21">New Button</string>
+    <string name="button22">New Button</string>
+    <string name="bt23">New Button</string>
+    <string name="bt24">New Button</string>
+
+</resources>

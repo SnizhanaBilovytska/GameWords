@@ -1,0 +1,511 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:weightSum="1"
+    android:background="@android:drawable/button_onoff_indicator_off"
+    android:baselineAligned="false"
+    android:clickable="true"
+    style="@style/FullscreenTheme">
+
+
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="328dp"
+        android:id="@+id/lvFindedWords"
+        android:visibility="visible" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:weightSum="1">
+
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/introdusedLetters"
+        android:layout_toStartOf="@+id/bt5"
+        android:background="@drawable/abc_menu_dropdown_panel_holo_light"
+        android:inputType="text"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/lvFindedWords"
+        android:layout_toLeftOf="@+id/bt5"
+        android:layout_weight="0.89" />
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Accept"
+            android:id="@+id/btAccept"
+            android:layout_toEndOf="@+id/bt4"
+            android:layout_toStartOf="@+id/bt7"
+            android:layout_alignTop="@+id/btDelete"
+            android:layout_toRightOf="@+id/bt4"
+            android:layout_toLeftOf="@+id/bt7"
+            android:singleLine="false"
+            android:onClick="onClick" />
+
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btDelete"
+            android:layout_toEndOf="@+id/btDelete"
+            android:layout_alignTop="@+id/introdusedLetters"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:text="Delete"
+            android:layout_alignLeft="@+id/bt7"
+            android:layout_alignStart="@+id/bt7"
+            android:onClick="onClick" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/button1"
+            android:enabled="true"
+            android:maxWidth="10dp"
+            android:maxHeight="10dp"
+            android:visibility="visible"
+            android:layout_below="@+id/btDelete"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:clickable="true"
+            android:singleLine="false"
+            android:text="а"
+            android:background="@android:drawable/checkbox_off_background"
+            android:onClick="onClick"
+            android:textStyle="bold" />
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/bt2"
+            android:enabled="true"
+            android:maxWidth="10dp"
+            android:maxHeight="10dp"
+            android:layout_alignTop="@+id/button1"
+            android:layout_toRightOf="@+id/button1"
+            android:layout_toEndOf="@+id/button1"
+            android:background="@android:drawable/checkbox_off_background"
+            android:clickable="true"
+            android:text="б"
+            android:onClick="onClick"
+            android:textStyle="bold" />
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/bt3"
+            android:enabled="true"
+            android:maxWidth="10dp"
+            android:maxHeight="10dp"
+            android:layout_toEndOf="@+id/bt2"
+            android:layout_alignTop="@+id/bt2"
+            android:layout_toRightOf="@+id/bt2"
+            android:visibility="visible"
+            android:background="@android:drawable/checkbox_off_background"
+            android:clickable="true"
+            android:text="в"
+            android:onClick="onClick"
+            android:textStyle="bold" />
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/bt4"
+            android:enabled="true"
+            android:maxWidth="10dp"
+            android:maxHeight="10dp"
+            android:layout_alignTop="@+id/bt3"
+            android:layout_toRightOf="@+id/bt3"
+            android:layout_toEndOf="@+id/bt3"
+            android:background="@android:drawable/checkbox_off_background"
+            android:clickable="true"
+            android:text="г"
+            android:onClick="onClick"
+            android:textStyle="bold" />
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/bt5"
+            android:enabled="true"
+            android:maxWidth="10dp"
+            android:maxHeight="10dp"
+            android:layout_alignTop="@+id/bt4"
+            android:layout_toRightOf="@+id/bt4"
+            android:layout_toEndOf="@+id/bt4"
+            android:background="@android:drawable/checkbox_off_background"
+            android:clickable="true"
+            android:text="д"
+            android:onClick="onClick"
+            android:textStyle="bold" />
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/bt6"
+            android:enabled="true"
+            android:maxWidth="10dp"
+            android:maxHeight="10dp"
+            android:layout_alignTop="@+id/bt5"
+            android:layout_toRightOf="@+id/bt5"
+            android:layout_toEndOf="@+id/bt5"
+            android:background="@android:drawable/checkbox_off_background"
+            android:clickable="true"
+            android:text="е"
+            android:onClick="onClick"
+            android:textStyle="bold" />
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/bt7"
+            android:enabled="true"
+            android:maxWidth="10dp"
+            android:maxHeight="10dp"
+            android:layout_toEndOf="@+id/bt6"
+            android:layout_alignTop="@+id/bt6"
+            android:layout_toRightOf="@+id/bt6"
+            android:background="@android:drawable/checkbox_off_background"
+            android:clickable="true"
+            android:text="ж"
+            android:onClick="onClick"
+            android:textStyle="bold" />
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/bt8"
+            android:enabled="true"
+            android:maxWidth="10dp"
+            android:maxHeight="10dp"
+            android:layout_toEndOf="@+id/bt7"
+            android:layout_alignTop="@+id/bt7"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_toRightOf="@+id/bt7"
+            android:background="@android:drawable/checkbox_off_background"
+            android:clickable="true"
+            android:text="з"
+            android:onClick="onClick"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/bt9"
+            android:enabled="true"
+            android:maxWidth="10dp"
+            android:maxHeight="10dp"
+            android:layout_below="@+id/button1"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:clickable="true"
+            android:background="@android:drawable/checkbox_off_background"
+            android:text="и"
+            android:onClick="onClick"
+            android:textStyle="bold" />
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/bt10"
+            android:enabled="true"
+            android:maxWidth="10dp"
+            android:maxHeight="10dp"
+            android:layout_below="@+id/bt2"
+            android:layout_toLeftOf="@+id/bt3"
+            android:layout_toStartOf="@+id/bt3"
+            android:clickable="true"
+            android:background="@android:drawable/checkbox_off_background"
+            android:text="й"
+            android:onClick="onClick"
+            android:textStyle="bold" />
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/bt11"
+            android:enabled="true"
+            android:maxWidth="10dp"
+            android:maxHeight="10dp"
+            android:layout_below="@+id/bt3"
+            android:layout_toLeftOf="@+id/bt4"
+            android:layout_toStartOf="@+id/bt4"
+            android:background="@android:drawable/checkbox_off_background"
+            android:clickable="true"
+            android:text="к"
+            android:onClick="onClick"
+            android:textStyle="bold" />
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/bt12"
+            android:enabled="true"
+            android:maxWidth="10dp"
+            android:maxHeight="10dp"
+            android:layout_toStartOf="@+id/bt5"
+            android:layout_below="@+id/bt4"
+            android:layout_toLeftOf="@+id/bt5"
+            android:clickable="true"
+            android:background="@android:drawable/checkbox_off_background"
+            android:text="л"
+            android:onClick="onClick"
+            android:textStyle="bold" />
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/bt13"
+            android:enabled="true"
+            android:maxWidth="10dp"
+            android:maxHeight="10dp"
+            android:layout_below="@+id/bt5"
+            android:layout_toLeftOf="@+id/bt6"
+            android:layout_toStartOf="@+id/bt6"
+            android:visibility="visible"
+            android:background="@android:drawable/checkbox_off_background"
+            android:clickable="true"
+            android:text="м"
+            android:onClick="onClick"
+            android:textStyle="bold" />
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/bt14"
+            android:enabled="true"
+            android:maxWidth="10dp"
+            android:maxHeight="10dp"
+            android:layout_below="@+id/bt6"
+            android:layout_alignLeft="@+id/bt6"
+            android:layout_alignStart="@+id/bt6"
+            android:clickable="true"
+            android:background="@android:drawable/checkbox_off_background"
+            android:text="н"
+            android:onClick="onClick"
+            android:textStyle="bold" />
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/bt15"
+            android:enabled="true"
+            android:maxWidth="10dp"
+            android:maxHeight="10dp"
+            android:layout_toEndOf="@+id/bt6"
+            android:layout_below="@+id/bt7"
+            android:layout_toLeftOf="@+id/bt8"
+            android:layout_toStartOf="@+id/bt8"
+            android:layout_toRightOf="@+id/bt6"
+            android:background="@android:drawable/checkbox_off_background"
+            android:clickable="true"
+            android:text="о"
+            android:onClick="onClick"
+            android:textStyle="bold" />
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/bt16"
+            android:enabled="true"
+            android:maxWidth="10dp"
+            android:maxHeight="10dp"
+            android:layout_toEndOf="@+id/introdusedLetters"
+            android:layout_below="@+id/bt8"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignLeft="@+id/bt8"
+            android:layout_alignStart="@+id/bt8"
+            android:clickable="true"
+            android:background="@android:drawable/checkbox_off_background"
+            android:text="п"
+            android:onClick="onClick"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/bt17"
+            android:enabled="true"
+            android:maxWidth="10dp"
+            android:maxHeight="10dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignTop="@+id/bt18"
+            android:layout_alignBottom="@+id/bt18"
+            android:background="@android:drawable/checkbox_off_background"
+            android:clickable="true"
+            android:text="р"
+            android:onClick="onClick"
+            android:textStyle="bold" />
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/bt18"
+            android:enabled="true"
+            android:maxWidth="10dp"
+            android:maxHeight="10dp"
+            android:layout_toStartOf="@+id/bt11"
+            android:layout_below="@+id/bt10"
+            android:layout_toLeftOf="@+id/bt11"
+            android:clickable="true"
+            android:background="@android:drawable/checkbox_off_background"
+            android:text="с"
+            android:onClick="onClick"
+            android:textStyle="bold" />
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/bt19"
+            android:enabled="true"
+            android:maxWidth="10dp"
+            android:maxHeight="10dp"
+            android:layout_toStartOf="@+id/bt12"
+            android:background="@android:drawable/checkbox_off_background"
+            android:clickable="true"
+            android:text="т"
+            android:layout_below="@+id/bt11"
+            android:layout_toLeftOf="@+id/bt12"
+            android:onClick="onClick"
+            android:textStyle="bold" />
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/bt20"
+            android:enabled="true"
+            android:maxWidth="10dp"
+            android:maxHeight="10dp"
+            android:layout_toStartOf="@+id/bt13"
+            android:layout_below="@+id/bt12"
+            android:layout_toLeftOf="@+id/bt13"
+            android:background="@android:drawable/checkbox_off_background"
+            android:clickable="true"
+            android:text="у"
+            android:onClick="onClick"
+            android:textStyle="bold" />
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/bt21"
+            android:enabled="true"
+            android:maxWidth="10dp"
+            android:maxHeight="10dp"
+            android:layout_below="@+id/bt13"
+            android:layout_toLeftOf="@+id/bt14"
+            android:layout_toStartOf="@+id/bt14"
+            android:background="@android:drawable/checkbox_off_background"
+            android:clickable="true"
+            android:text="ф"
+            android:onClick="onClick"
+            android:textStyle="bold" />
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/bt22"
+            android:enabled="true"
+            android:maxWidth="10dp"
+            android:maxHeight="10dp"
+            android:layout_alignTop="@+id/bt21"
+            android:layout_toRightOf="@+id/bt21"
+            android:layout_toEndOf="@+id/bt21"
+            android:clickable="true"
+            android:background="@android:drawable/checkbox_off_background"
+            android:text="ч"
+            android:onClick="onClick"
+            android:textStyle="bold" />
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/bt23"
+            android:enabled="true"
+            android:maxWidth="10dp"
+            android:maxHeight="10dp"
+            android:layout_toStartOf="@+id/bt16"
+            android:background="@android:drawable/checkbox_off_background"
+            android:clickable="true"
+            android:layout_below="@+id/bt15"
+            android:text="ц"
+            android:onClick="onClick"
+            android:layout_alignLeft="@+id/bt15"
+            android:layout_alignStart="@+id/bt15"
+            android:textStyle="bold" />
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/bt24"
+            android:enabled="true"
+            android:maxWidth="10dp"
+            android:maxHeight="10dp"
+            android:layout_toEndOf="@+id/bt23"
+            android:layout_alignTop="@+id/bt23"
+            android:layout_toRightOf="@+id/bt23"
+            android:background="@android:drawable/checkbox_off_background"
+            android:clickable="true"
+            android:text="я"
+            android:onClick="onClick"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+
+</LinearLayout>
